@@ -24,6 +24,12 @@ public class pin : MonoBehaviour
         }
         else if (col.tag == "pin")
         {
+            Debug.Log("rounds: " + KeepData.RoundsPlayed.ToString());
+            if(KeepData.HighScore < KeepData.PlayerScore)
+            {
+                KeepData.HighScore = KeepData.PlayerScore;
+            }
+
             FindObjectOfType<GameManager>().EndGame();
         }
 

@@ -12,6 +12,7 @@ public class spawner : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             SpawnPin();
+            
         }
     }
 

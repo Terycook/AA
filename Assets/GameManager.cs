@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public spawner Spawner;
 
     public Animator animator;
+    
 
     public void EndGame()
     {
@@ -21,13 +22,15 @@ public class GameManager : MonoBehaviour
         Spawner.enabled = false;
 
         animator.SetTrigger("EndGame");
+        
 
         GameHasEnded = true;
         
     }
 
     public void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+    { 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        KeepData.RoundsPlayed++;
     }
 }
